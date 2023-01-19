@@ -5,8 +5,8 @@ import cv2
 from matplotlib import pyplot as plt
 import numpy
 
-  img = cv2.imread(r'(Abslute PATH of the input picture)')
-#img = cv2.imread(r'predict/IMG_1129.JPG')
+      #img = cv2.imread(r'(Abslute PATH of the input picture)')
+img = cv2.imread(r'predict/IMG_1129.JPG')
 
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -26,7 +26,7 @@ orb = cv2.ORB_create(nfeatures=1500)
 keypoints, descriptors = orb.detectAndCompute(closing, None)
 featuredImg = cv2.drawKeypoints(closing, keypoints, None)
 
-#OUTPUT image
+    #OUTPUT image
 cv2.imwrite(r'predict/out.jpg', featuredImg)
 
 
