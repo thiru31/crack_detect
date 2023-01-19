@@ -5,9 +5,8 @@ import cv2
 from matplotlib import pyplot as plt
 import numpy
 
-  img = cv2.imread(r'(PATH)')
-#img = cv2.imread(r'C:\Users\Thirumalai N\Downloads\crack-detection-opencv-master\crack-detection-opencv-master\test\test (6).JPG')
-
+  img = cv2.imread(r'(Abslute PATH of the input picture)')
+#img = cv2.imread(r'predict/IMG_1129.JPG')
 
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -28,7 +27,7 @@ keypoints, descriptors = orb.detectAndCompute(closing, None)
 featuredImg = cv2.drawKeypoints(closing, keypoints, None)
 
 #OUTPUT image
-cv2.imwrite(r'C:\Users\Thirumalai N\Downloads\crack-detection-opencv-master\crack-detection-opencv-master\test\out.jpg', featuredImg)
+cv2.imwrite(r'predict/out.jpg', featuredImg)
 
 
 #PLOTTING POINTS ON CRACK
